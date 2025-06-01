@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <script src="/common/auth-check.js" defer></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Админка — Заказы</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="frame">
+    <div class="container">
+      <div class="div">
+
+        <div class="menu-wrapper">
+          <div class="menu-buttons">
+            <button class="btn btn-products" onclick="window.location.href='../allProducts/index.html'">Товары</button>
+            <button class="btn btn-orders active" onclick="window.location.href='../orders/index.html'">Заказы</button>
+            <button id="logout">Выйти</button>
+          </div>
+        </div>
+
+        <div class="orders-header">
+          <h2 class="orders-title">Список заказов</h2>
+        </div>
+
+        <div class="search-container">
+          <label for="search-input">Поиск:</label>
+          <input type="text" id="search-input"/>
+        </div>
+
+        <div class="orders-columns">
+          <div class="order-cell">Номер</div>
+          <div class="order-cell">Дата</div>
+          <div class="order-cell">Статус</div>
+          <div class="order-cell"></div>
+        </div>
+
+        <div id="orders-list"></div>
+
+        <div class="create-order-wrapper">
+          <button class="create-order-button" onclick="window.location.href='../createOrder/index.html'">
+            Создать заказ
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <script src="orders.js" defer></script>
+</body>
+</html>

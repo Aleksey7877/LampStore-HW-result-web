@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <script src="/common/auth-check.js" defer></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Информация о заказе</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="frame">
+    <div class="container">
+      <div class="menu-wrapper">
+        <div class="menu-buttons">
+          <button class="btn btn-products" onclick="window.location.href='../allProducts/index.html'">Товары</button>
+          <button class="btn btn-orders active" onclick="window.location.href='../orders/index.html'">Заказы</button>
+          <button id="logout">Выйти</button>
+        </div>
+      </div>
+      <h1 id="order-title" class="order-title">Заказ №...</h1>
+
+      <div class="table-header">
+        <div class="table-cell">Позиция</div>
+        <div class="table-cell">Количество</div>
+        <div class="table-cell">Стоимость</div>
+        <div class="table-cell"></div>
+      </div>
+
+      <div id="items-container"></div>
+
+      <button class="add-button">Добавить</button>
+
+      <div id="total-price" class="total-price">Общая стоимость заказа: ... рублей</div>
+
+      <div class="customer-title">Данные покупателя</div>
+      <div class="customer-info">
+        <label for="name">ФИО:</label>
+        <input type="text" id="name">
+
+        <label for="email">Email:</label>
+        <input type="email" id="email">
+
+        <label for="phone">Телефон:</label>
+        <input type="tel" id="phone">
+
+        <label for="address">Адрес доставки:</label>
+        <input type="text" id="address">
+
+        <label for="info">Комментарий:</label>
+        <textarea id="info"></textarea>
+      </div>
+
+      <div class="status-section">
+        <label for="status">Статус заказа:</label>
+        <select id="status">
+          <option value="1">processing</option>
+          <option value="2">shipped</option>
+          <option value="3">delivered</option>
+          <option value="4">cancelled</option>
+        </select>
+        <button id="save-button">Сохранить</button>
+      </div>
+    </div>
+  </div>
+  <div id="overlay"></div>
+  <div id="modal-window">
+    <div id="modal-content">
+      <p id="modal-message">Заказ сохранён</p>
+      <button id="modal-ok">OK</button>
+    </div>
+  </div>
+  <script src="orderinfo.js"></script>
+</body>
+</html>

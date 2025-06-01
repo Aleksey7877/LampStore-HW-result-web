@@ -1,0 +1,278 @@
+html, body {
+	margin: 0;
+	height: 100%;
+	font-family: "Inter-Regular", Helvetica, sans-serif;
+	background-color: #ffffff;
+}
+
+.frame {
+	background-color: #ffffff;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 100%;
+	min-height: 100vh;
+}
+
+.container {
+	width: 100%;
+	max-width: 563px;
+	display: flex;
+	flex-direction: column;
+	gap: 30px;
+	margin: 0 auto;
+	padding: 20px;
+}
+
+.div {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+#logout {
+  width: 99px;
+  height: 32px;
+  font-size: 13px;
+  color: black;
+  border: 1px solid black;
+  border-radius: 6px;
+  background-color: white;
+  cursor: pointer;
+  line-height: 32px;
+  text-align: center;
+}
+
+.btn {
+	width: 99px;
+	height: 32px;
+	font-family: "Inter", sans-serif;
+	font-size: 13px;
+	color: black;
+	border: 1px solid black;
+	border-radius: 6px;
+	background-color: white;
+	cursor: pointer;
+	padding: 0 8px;
+	text-align: center;
+	line-height: 32px;
+}
+
+.btn.active {
+	background-color: #dcdcdc;
+}
+
+.menu-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+}
+
+
+.search-create {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	gap: 20px;
+}
+
+
+.create-button {
+	width: 140px;
+	height: 32px;
+	font-size: 14px;
+	border: 1px solid black;
+	border-radius: 6px;
+	background-color: white;
+	cursor: pointer;
+}
+
+.menu-wrapper {
+	width: 100%;
+	max-width: 563px;
+	display: flex;
+	justify-content: center;
+}
+
+.create-button {
+	padding: 8px 16px;
+	font-size: 14px;
+	background-color: #ffffff;
+	border: 1px solid #999;
+	border-radius: 6px;
+	cursor: pointer;
+}
+
+.create-button:hover {
+	background-color: #e0e0e0;
+}
+.create-button:focus,
+.create-button:active {
+	background-color: #ffffff;
+	outline: none;
+}
+
+.input-price:focus {
+	border: 1px solid #666;
+}
+
+.photo-button:hover {
+  background-color: #e0e0e0;
+}
+
+.photo-button:focus,
+.photo-button:active {
+  background-color: #ffffff;
+  outline: none;
+}
+
+.archive-checkbox:checked::before {
+	content: '';
+	position: absolute;
+	top: 2px;
+	left: 5px;
+	width: 5px;
+	height: 10px;
+	border: solid #000;
+	border-width: 0 2px 2px 0;
+	transform: rotate(45deg);
+}
+
+.save-button:hover {
+  background-color: #f0f0f0;
+}
+
+input,
+textarea,
+select,
+button {
+  font-family: "Inter", Helvetica, sans-serif;
+  font-size: 14px;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.4);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.modal-content input[type="text"],
+.modal-content input[type="file"] {
+  font-size: 14px;
+  padding: 6px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.modal-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+
+.create-product-button:hover {
+  background-color: #45a049;
+}
+
+
+.modal-save-button,
+.modal-save-button:hover {
+  background-color: #1976d2;
+}
+
+.modal-cancel-button:hover {
+  background-color: #d32f2f;
+}
+
+#search-input {
+  width: 25%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+
+.orders-title {
+	text-align: center;
+	font-size: 30px;
+}
+
+.orders-columns,
+.order-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; 
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.order-cell {
+  flex: 1;
+  text-align: center; 
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  height: 40px;
+}
+
+.order-cell:last-child {
+  justify-content: flex-end;
+}
+
+.create-order-wrapper {
+  display: flex;
+  justify-content: center;
+  margin: 30px 0;
+}
+
+.create-order-button {
+  padding: 10px 24px;
+  font-size: 16px;
+  border: 1px solid #000;
+  border-radius: 8px;
+  background-color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.create-order-button:hover {
+  background-color: #f0f0f0;
+}
+
+.order-item-button {
+  padding: 6px 12px;
+  font-size: 14px;
+  border: 1px solid #000;
+  border-radius: 6px;
+  background-color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.order-item-button:hover {
+  background-color: #f0f0f0;
+}

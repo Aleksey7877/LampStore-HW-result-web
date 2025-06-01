@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <script src="/common/auth-check.js" defer></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Админка — Товары</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="imageModal" class="modal">
+    <div class="modal-content">
+      <label>Введите URL изображения:</label>
+      <input type="text" id="imageUrlInput" placeholder="https://..." />
+      <label>или выберите файл с компьютера:</label>
+      <input type="file" id="imageFileInput" accept="image/*" />
+      <div class="modal-buttons">
+        <button id="cancelModal" class="modal-cancel-button">Отмена</button>
+        <button id="saveModal" class="modal-save-button">Ок</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="frame">
+    <div class="container">
+      <div class="div">
+        <div class="menu-wrapper">
+          <div class="menu-buttons">
+            <button class="btn btn-products active">Товары</button>
+            <button class="btn btn-orders">Заказы</button>
+            <button id="logout">Выйти</button>
+          </div>
+        </div>
+
+        <div class="search-create">
+          <div class="search-box">
+            <span class="text-wrapper-7">Поиск</span>
+            <input class="img-12" />
+          </div>
+          <button class="create-product-button">Создать товар</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="admin-products.js"></script>
+</body>
+</html>
